@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 80%;
+            max-width: 960px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav {
+            grid-column: 1 / -1;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .left-content {
+            padding: 15px;
+        }
+
+        .left-content h2 {
+            text-align: center;
+            color: #555;
+        }
+
+        .left-content p {
+            text-align: center;
+            color: #777;
+        }
+
+        .image-placeholder {
+            background-color: #ddd;
+            height: 150px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            border-radius: 5px;
+        }
+
+        .form-section {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-section h2 {
+            color: #555;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .form-buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-buttons button[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .form-buttons button[type="reset"] {
+            background-color: #f0ad4e;
+            color: white;
+        }
+
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Awesome Webpage</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="left-content">
+            <h2>Welcome to Our Page</h2>
+            <p>This is some sample text in the center of the left section. You can add more interesting content here to engage your visitors.</p>
+            <div class="image-placeholder">
+                <span>Image will go here</span>
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Enter Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Enter Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p>&copy; Intership copyright symbol 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
