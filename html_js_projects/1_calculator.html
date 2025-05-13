@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <script>
+        function calculate() {
+            let a = parseFloat(document.getElementById('num1').value);
+            let b = parseFloat(document.getElementById('num2').value);
+            let op = document.getElementById('operator').value;
+            let result;
+            if(op === '+') result = a + b;
+            else if(op === '-') result = a - b;
+            else if(op === '*') result = a * b;
+            else if(op === '/') result = a / b;
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="num1"> 
+    <select id="operator">
+        <option>+</option><option>-</option><option>*</option><option>/</option>
+    </select>
+    <input type="number" id="num2">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+</body>
+</html>
