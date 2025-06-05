@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    body { font-family: sans-serif; padding: 30px; }
+    label, input { display: block; margin: 10px 0; }
+    input[type="submit"] { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <label for="email">Email:</label>
+    <input id="email" type="text">
+    <label for="password">Password:</label>
+    <input id="password" type="password">
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    function validateForm() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      if (!email.includes('@')) {
+        alert('Invalid email format');
+        return false;
+      }
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters');
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

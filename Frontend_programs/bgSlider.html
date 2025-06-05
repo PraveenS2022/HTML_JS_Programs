@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Slider</title>
+  <style>
+    body {
+      font-family: Arial; transition: background-color 1s;
+      text-align: center; padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Automatic Background Slider</h1>
+  <script>
+    const colors = ['#f00', '#0f0', '#00f', '#ff0', '#0ff'];
+    let index = 0;
+    setInterval(() => {
+      document.body.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    }, 2000);
+  </script>
+</body>
+</html>
