@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple To-Do App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        #todo-input {
+            padding: 10px;
+            width: 300px;
+        }
+        #add-btn {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #fff;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="todo-input" placeholder="Enter task" />
+    <button id="add-btn">Add</button>
+    <ul id="todo-list"></ul>
+
+    <script>
+        const addBtn = document.getElementById('add-btn');
+        const todoInput = document.getElementById('todo-input');
+        const todoList = document.getElementById('todo-list');
+
+        addBtn.onclick = () => {
+            const task = todoInput.value.trim();
+            if (task === '') return;
+
+            const li = document.createElement('li');
+            li.textContent = task;
+
+            const delBtn = document.createElement('button');
+            delBtn.textContent = 'Delete';
+            delBtn.className = 'delete-btn';
+            delBtn.onclick = () => li.remove();
+
+            li.appendChild(delBtn);
+            todoList.appendChild(li);
+            todoInput.value = '';
+        };
+    </script>
+</body>
+</html>
